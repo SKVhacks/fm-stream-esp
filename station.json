@@ -1,0 +1,12 @@
+{
+  "stations": [
+    {
+      "name": "Theni FM",
+      "url": "https://server1.mahamediacast.com/proxy/thenifm/stream"
+    },
+    {
+      "name": "hello fm",
+      "url": "https://radios.crabdance.com:8002/3"
+    }
+  ]
+}
