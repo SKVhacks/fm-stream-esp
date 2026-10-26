@@ -1,28 +1,9 @@
 {
   "stations": [
-    {
-      "name": "Theni FM",
-      "url": "https://server1.mahamediacast.com/proxy/thenifm/stream"
-    },
-    {
-      "name": "hello fm",
-      "url": "https://radios.crabdance.com:8002/3"
-    },
-    {
-      "name": "Radio Mirchi Tamil FM",
-      "url": "https://radios.crabdance.com:8002/1"
-    },
-    {
-      "name": "Vaigai FM",
-      "url": "https://cast1.my-control-panel.com/proxy/geethan3/stream"
-    },
-    {
-      "name": "Kodai City FM",
-      "url": "https://strw3.openstream.co/786?aw_0_1st.collectionid%3D6812%26stationId%3D6812%26publisherId%3D810%26k%3D1792989894"
-    },
-    {
-      "name": "Tamil Top 100",
-      "url": "https://stream-288.surfernetwork.com/ex1yqu2gsh1tv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJleDF5cXUyZ3NoMXR2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI5NHpWRnpTLVMzS29uRlNBeDhYWDZnIiwiaWF0IjoxNzkyOTg5OTg1LCJleHAiOjE3OTI5OTAwNDV9.aeFbLHthslBdRnJZ5W16B_N8R7aPvbtiQXVdwomqvTQ"
-    }
+    { "name": "Theni FM", "lang": "Tamil", "url": "https://server1.mahamediacast.com/proxy/thenifm/stream" },
+    { "name": "Maha FM HD", "lang": "Tamil", "url": "https://server1.mahamediacast.com/proxy/mahafm/stream" },
+    { "name": "Radio Mirchi Tamil FM", "lang": "English", "url": "https://radios.crabdance.com:8002/1" },
+    { "name": "Vaigai FM", "lang": "Tamil", "url": "https://cast1.my-control-panel.com/proxy/geethan3/stream" },
+    { "name": "Kodai City FM", "lang": "Tamil", "url": "https://strw3.openstream.co/786?aw_0_1st.collectionid%3D6812%26stationId%3D6812%26publisherId%3D810%26k%3D1792989894" }
   ]
 }
