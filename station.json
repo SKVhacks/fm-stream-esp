@@ -1,9 +1,64 @@
 {
   "stations": [
-    { "name": "Theni FM", "lang": "Tamil", "url": "https://server1.mahamediacast.com/proxy/thenifm/stream" },
-    { "name": "Maha FM HD", "lang": "Tamil", "url": "https://server1.mahamediacast.com/proxy/mahafm/stream" },
-    { "name": "Radio Mirchi Tamil FM", "lang": "English", "url": "https://radios.crabdance.com:8002/1" },
-    { "name": "Vaigai FM", "lang": "Tamil", "url": "https://cast1.my-control-panel.com/proxy/geethan3/stream" },
-    { "name": "Kodai City FM", "lang": "Tamil", "url": "https://strw3.openstream.co/786?aw_0_1st.collectionid%3D6812%26stationId%3D6812%26publisherId%3D810%26k%3D1792989894" }
+    {
+      "name": "radio city",
+      "lang": "Tamil",
+      "url": "https://radios.crabdance.com:8002/5"
+    },
+    {
+      "name": "Radio ChennaiLive",
+      "lang": "Tamil",
+      "url": "https://vobook.ru/http://c2.radioboss.fm:8332/stream"
+    },
+    {
+      "name": "AIR Nagercoil Kumari",
+      "lang": "Tamil",
+      "url": "https://d1cvqgmbcpg5yn.cloudfront.net/10c64309264eb009/10c64309264eb009.m3u8"
+    },
+    {
+      "name": "AIR Tiruchirapalli",
+      "lang": "Tamil",
+      "url": "https://d3hrxqn1tritdh.cloudfront.net/340834aaac8e1081/340834aaac8e1081-1793106707268.ts"
+    },
+    {
+      "name": "Radio AIR Madurai",
+      "lang": "Tamil",
+      "url": "https://d3hrxqn1tritdh.cloudfront.net/5c28fdbb318c1f13/5c28fdbb318c1f13-1793107039015.ts"
+    },
+    {
+      "name": "Star Radio Tamil",
+      "lang": "Tamil",
+      "url": "https://strw3.openstream.co/632"
+    },
+    {
+      "name": "Radio Beat Retro",
+      "lang": "Tamil",
+      "url": "https://strw3.openstream.co/1520?aw_0_1st.collectionid%3D4732%26stationId%3D4732%26publisherId%3D1544%26k%3D1793107223"
+    },
+    {
+      "name": "Theni FM",
+      "lang": "Tamil",
+      "url": "https://server1.mahamediacast.com/proxy/thenifm/stream"
+    },
+    {
+      "name": "Maha FM HD",
+      "lang": "Tamil",
+      "url": "https://server1.mahamediacast.com/proxy/mahafm/stream"
+    },
+    {
+      "name": "Radio Mirchi Tamil FM",
+      "lang": "Tamil",
+      "url": "https://radios.crabdance.com:8002/1"
+    },
+    {
+      "name": "Vaigai FM",
+      "lang": "Tamil",
+      "url": "https://cast1.my-control-panel.com/proxy/geethan3/stream"
+    },
+    {
+      "name": "Kodai City FM",
+      "lang": "Tamil",
+      "url": "https://strw3.openstream.co/786?aw_0_1st.collectionid%3D6812%26stationId%3D6812%26publisherId%3D810%26k%3D1792989894"
+    }
   ]
 }
