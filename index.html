@@ -4,27 +4,32 @@
 body{font:15px system-ui,sans-serif;max-width:720px;margin:0 auto;padding:16px;background:#111;color:#eee}
 h1{font-size:20px}input,button,textarea{font:inherit;padding:8px;border-radius:6px;border:1px solid #444;background:#222;color:#eee}
 button{background:#2a6;border:0;cursor:pointer}button.d{background:#a33}
-.row{display:flex;gap:6px;margin:6px 0}.row input:first-child{width:35%}.row input:nth-child(2){flex:1}
+.row{display:flex;gap:6px;margin:6px 0}.row input:first-child{width:28%}.row{flex-wrap:nowrap}@media(max-width:560px){.row{flex-wrap:wrap}.row input{width:100%!important;flex:none!important}}.row input:nth-child(2){width:22%}.row input:nth-child(3){flex:1}
 textarea{width:100%;height:180px;box-sizing:border-box;font-family:monospace;font-size:13px}
 </style></head><body>
 <h1>Radio stations (<span id="n">0</span>)</h1>
-<p>Edit here, press <b>Make JSON</b>, copy the text, then paste it into <code>stations.json</code> on GitHub (Edit &rarr; Commit).</p>
+<p>Each station has a <b>Language</b> (for example Tamil, English, Hindi). The player's settings page uses it to filter stations. Edit here, press <b>Make JSON</b>, copy the text, then paste it into <code>stations.json</code> on GitHub (Edit &rarr; Commit).</p>
+<datalist id="langs"></datalist>
 <div id="list"></div>
 <div class="row"><button onclick="add()">+ Add station</button><button onclick="make()">Make JSON</button><button onclick="copyIt()">Copy</button></div>
 <textarea id="out" readonly></textarea>
 <script>
 let L=[];const $=i=>document.getElementById(i);
-function draw(){$('n').textContent=L.length;$('list').innerHTML='';L.forEach((s,i)=>{
+function draw(){$('n').textContent=L.length;$('list').innerHTML='';langs();L.forEach((s,i)=>{
  const r=document.createElement('div');r.className='row';
- const a=document.createElement('input'),b=document.createElement('input'),d=document.createElement('button');
- a.placeholder='Name';a.value=s.name||'';b.placeholder='http(s)://stream-url';b.value=s.url||'';d.textContent='x';d.className='d';
- a.oninput=()=>s.name=a.value;b.oninput=()=>s.url=b.value;d.onclick=()=>{L.splice(i,1);draw()};
- r.append(a,b,d);$('list').appendChild(r)})}
-function add(){L.push({name:'',url:''});draw()}
+ const a=document.createElement('input'),g=document.createElement('input'),b=document.createElement('input'),d=document.createElement('button');
+ a.placeholder='Name';a.value=s.name||'';g.placeholder='Language';g.setAttribute('list','langs');g.value=s.lang||'';
+ b.placeholder='http(s)://stream-url';b.value=s.url||'';d.textContent='x';d.className='d';
+ a.oninput=()=>s.name=a.value;g.oninput=()=>{s.lang=g.value;langs()};b.oninput=()=>s.url=b.value;d.onclick=()=>{L.splice(i,1);draw()};
+ r.append(a,g,b,d);$('list').appendChild(r)})}
+function langs(){const set=new Set(['Tamil','English','Hindi','Telugu','Malayalam','Kannada']);
+ L.forEach(s=>{const v=(s.lang||'').trim();if(v)set.add(v)});
+ $('langs').innerHTML='';set.forEach(v=>{const o=document.createElement('option');o.value=v;$('langs').appendChild(o)})}
+function add(){L.push({name:'',lang:'',url:''});draw()}
 function make(){
- const ok=L.map(s=>({name:(s.name||'').trim().slice(0,60),url:(s.url||'').trim()}))
-  .filter(s=>s.name&&/^https?:\/\/\S+$/i.test(s.url)).slice(0,300);
+ const ok=L.map(s=>({name:(s.name||'').trim().slice(0,60),lang:(s.lang||'').trim().slice(0,30),url:(s.url||'').trim()}))
+  .filter(s=>s.name&&/^https?:\/\/\S+$/i.test(s.url)).map(s=>s.lang?s:{name:s.name,url:s.url}).slice(0,300);
  $('out').value=JSON.stringify({stations:ok},null,2)}
 function copyIt(){make();$('out').select();document.execCommand('copy')}
-fetch('stations.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{L=j.stations||[];draw();make()}).catch(()=>{add()});
+fetch('station.json',{cache:'no-store'}).then(r=>r.ok?r:fetch('stations.json',{cache:'no-store'})).then(r=>r.json()).then(j=>{L=j.stations||[];draw();make()}).catch(()=>{add()});
 </script></body></html>
