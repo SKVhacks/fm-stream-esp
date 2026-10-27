@@ -8,7 +8,7 @@
     {
       "name": "Radio ChennaiLive",
       "lang": "Tamil",
-      "url": "https://vobook.ru/http://c2.radioboss.fm:8332/stream"
+      "url": "http://c2.radioboss.fm:8332/stream"
     },
     {
       "name": "AIR Nagercoil Kumari",
@@ -18,12 +18,12 @@
     {
       "name": "AIR Tiruchirapalli",
       "lang": "Tamil",
-      "url": "https://d3hrxqn1tritdh.cloudfront.net/340834aaac8e1081/340834aaac8e1081-1793106707268.ts"
+      "url": "https://d3hrxqn1tritdh.cloudfront.net/340834aaac8e1081/340834aaac8e1081.m3u8"
     },
     {
       "name": "Radio AIR Madurai",
       "lang": "Tamil",
-      "url": "https://d3hrxqn1tritdh.cloudfront.net/5c28fdbb318c1f13/5c28fdbb318c1f13-1793107039015.ts"
+      "url": "https://d3hrxqn1tritdh.cloudfront.net/5c28fdbb318c1f13/5c28fdbb318c1f13.m3u8"
     },
     {
       "name": "Star Radio Tamil",
